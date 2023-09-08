@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.main{
+    display: flex;
+    width: 500px;
+}
+button{
+
+    width: 80px;
+    font-size: 25px;
+    background-color: green;
+    color: aliceblue;
+    margin-left: 20px;
+}
+button:hover{
+    background-color:lightgreen;
+}
+p{
+    margin-left: 20px;
+}
+    </style>
+</head>
+<body>
+    <h1>Counter</h1>
+   <div class="main">
+    <button id="add">+</button>
+    <p id="result">0</p>
+    <button id="sub">-</button>
+   </div>
+   <script>
+    let add=document.getElementById("add")
+    let sub=document.getElementById("sub")
+    let result=document.getElementById("result")
+    
+    add.addEventListener("click",function(){
+let sets=Number(result.innerHTML)
+sets+=1;
+result.innerHTML=sets;
+    })
+    sub.addEventListener("click",function(){
+        if(result.innerHTML !=0){
+let sets=Number(result.innerHTML)
+sets-=1;
+result.innerHTML=sets;}
+else{
+    alert("Counter is going beyond 0")
+}
+    })
+   </script>
+</body>
+</html>

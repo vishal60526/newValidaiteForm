@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;
+            height: 80px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+ <div id="div">
+    <h1 id="message"></h1>
+    
+ </div>
+ <button id="btn">Toogle</button>
+ <script>
+  
+   let  btn=document.getElementById("btn")
+    let message=document.getElementById("message")
+    let div=document.getElementById("div")
+    btn.id=0;
+    btn.addEventListener("click", function(){
+      
+    if(btn.id==0){
+        message.innerHTML="This is Light Mode"
+    div.style.backgroundColor="white"
+    message.style.color="black"
+        btn.id=1;
+    }
+    else{
+        message.innerHTML="This is Dark Mode"
+        message.style.color="white"
+        div.style.backgroundColor="black"
+        btn.id=0;
+    }
+  
+}
+    )
+   
+        </script>
+    </body>
+</html>

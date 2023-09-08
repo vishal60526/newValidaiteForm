@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Update Profile Picture</h1>
+    <input type="file" name="" id="vishal">
+    <h3>Your Profile Pictiure</h3>
+    <img src="" title="no propile pictures" id="img"/>
+    <script>
+        let names=document.getElementById("img")
+       let inputs=document.getElementById("vishal")
+       inputs.addEventListener("click",function(event){
+        if(event.target.files && event.target.files[0]){
+    let inform=event.target.files[0];
+
+   let sound=URL.createObjectURL(inform)
+   console.log(sound)
+   names.src=sound;
+}
+
+       })
+    
+       </script>
+</body>
+
+</html>
+
+   

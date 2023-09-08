@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .main {
+
+            padding: 10px;
+            width: 350px;
+            height: 450;
+            border: 2px solid black;
+            border-radius: 15px;
+            display: flex;
+            background-color: rgb(187, 184, 184);
+            justify-content: center;
+        }
+
+        .label-UserName,
+        .label-password {
+            margin-left: 90px;
+            font-size: 25px;
+
+
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 250px;
+            height: 30px;
+            border-radius: 5px;
+            font-size: 20px;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+
+        button {
+            font-size: 20px;
+            margin-left: 100px;
+            margin-top: 20px;
+            width: 90px;
+            color: aliceblue;
+            background-color: green;
+            outline: none;
+            border: none;
+            border-radius: 2px;
+
+        }
+
+        button:hover {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <h1>The Vishal Company</h1>
+            <label for="username" class="label-UserName">UserName:</label><br>
+            <input type="text" name="" id="username"><br>
+            <label for="password" class="label-password">Password:</label><br>
+            <input type="password" name="" id="password"><br>
+            <button>Login</button><br>
+            <strong>Note:</strong>
+            <div>
+                <p id="one"> 1. At least 8 character sholud be Contain Username</p>
+                <p id="two"> 2. At least 1 number character Username</p>
+                <p id="four"> 4. At least 8 character Password</p>
+                <p id="three"> 3. At least 1 special character Password</p>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+
+        let username = document.getElementById("username");
+        let password = document.getElementById("password")
+        
+        let number=[1,2,3,4,5,6,7,8,9,0]
+        password.addEventListener("keyup", function (e) {
+            if (password.value.length >= 8) {
+                document.getElementById("four").style.color = "green";          
+                         
+                      }
+            else{
+                document.getElementById("four").style.color = "red";  
+            }
+         
+                    }
+    
+        )
+         username.addEventListener("keyup",function(){
+            if (username.value.length >= 8) {
+                document.getElementById("one").style.color = "green";          
+                         
+                      }
+            else{
+                document.getElementById("one").style.color = "red";  
+            }
+        })
+                    
+    
+        
+        username.addEventListener("keyup", function (e) {
+            let check = username.value.split("")
+         
+            if (check.includes("0")) {
+                document.getElementById("two").style.color = "green";          
+                         
+                      }
+                    else  if (check.includes("1")) {
+                document.getElementById("two").style.color = "green";          
+                         
+                      }
+                      else  if (check.includes("2")) {
+                document.getElementById("two").style.color = "green";          
+                         
+                      }
+                      else  if (check.includes("3")) {
+                document.getElementById("two").style.color = "green";          
+                         
+                      }
+                      else  if (check.includes("3")) {
+                document.getElementById("two").style.color = "green";          
+                         
+                      }
+                      else  if (check.includes("4")) {
+                document.getElementById("two").style.color = "green";          
+                         
+                      }
+                      else  if (check.includes("5")) {
+                document.getElementById("two").style.color = "green";          
+                         
+                      }
+                      else  if (check.includes("6")) {
+                document.getElementById("two").style.color = "green";          
+                         
+                      }
+                      else  if (check.includes("7")) {
+                document.getElementById("two").style.color = "green";          
+                         
+                      }
+                      else  if (check.includes("8")) {
+                document.getElementById("two").style.color = "green";          
+                         
+                      }
+                      else  if (check.includes("9")) {
+                document.getElementById("two").style.color = "green";          
+                         
+                      }
+            else{
+                document.getElementById("two").style.color = "red";  
+            }
+         
+                    }
+    
+        )
+   
+
+        // for the check charcter(username)
+        username.addEventListener("keydown", function (e) {
+            if (username.value.length <= 8) {
+                document.getElementById("one").style.color = "red"
+            }
+        })
+                        
+        password.addEventListener("keyup", function (e) {
+            let checks = password.value.split("")
+         
+            if (checks.includes("~")) {
+                document.getElementById("three").style.color = "green";          
+                         
+                      }
+                    else  if (checks.includes("@")) {
+                document.getElementById("three").style.color = "green";          
+                         
+                      }
+                      else  if (checks.includes("#")) {
+                document.getElementById("three").style.color = "green";          
+                         
+                      }
+                      else  if (checks.includes("$")) {
+                document.getElementById("three").style.color = "green";          
+                         
+                      }
+                  
+                      else  if (checks.includes("%")) {
+                document.getElementById("three").style.color = "green";          
+                         
+                      }
+                      else  if (checks.includes("^")) {
+                document.getElementById("three").style.color = "green";          
+                         
+                      }
+                      else  if (checks.includes("&")) {
+                document.getElementById("three").style.color = "green";          
+                         
+                      }
+                      else  if (checks.includes("*")) {
+                document.getElementById("three").style.color = "green";          
+                         
+                      }
+                      else  if (checks.includes("<")) {
+                document.getElementById("three").style.color = "green";          
+                         
+                      }
+                      else  if (checks.includes(">")) {
+                document.getElementById("three").style.color = "green";          
+                         
+                      }
+            else{
+                document.getElementById("three").style.color = "red";  
+            }
+         
+                    }
+    
+        )
+    </script>
+</body>
+
+</html>

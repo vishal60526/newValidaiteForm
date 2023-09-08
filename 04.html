@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <input type="text" name="" id="myName">
+  <p id="hello">Type userName </p>
+<button id="btn">validiate</button>
+   <script>
+   var myName=document.getElementById("myName")
+   var btn=document.getElementById("btn")
+myName.addEventListener("keyup", function(e){
+  let values=myName.value;
+  let check=values.split("");
+if(values.length>8){
+  document.getElementById("hello").style.color="green"
+}
+
+
+})
+    
+   </script>
+</body>
+</html>
