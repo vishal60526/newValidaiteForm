@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      let div=document.createElement("div")
+      div.style.display="flex"
+      document.body.appendChild(div)
+       
+        let headings= document.createElement("h1");
+        headings.innerHTML="Which is favorite Programing Language:"
+        div.appendChild(headings)
+        let array=["Java","C langauge","Java_Script","Html","Python"]
+        let make_list=document.createElement("select")
+        make_list.style.height="30px"
+        make_list.style.marginTop="30px"
+        div.appendChild(make_list)
+    for(let i=0; i<array.length; i++){
+        let opt=document.createElement("option")
+        opt.text=array[i]
+
+        make_list.appendChild(opt)
+    }
+          </script>
+</body>
+</html>

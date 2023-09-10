@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+       margin-top: 20px;
+        }
+    </style>
+</head>
+<body><div>
+    <h1 id="heading">Your image is Visible</h1>
+    <div class="btn">
+    <button id="btn">toogle</button></div>
+    <img height="200px" src="https://media.istockphoto.com/id/1481180550/photo/beach.jpg?s=1024x1024&w=is&k=20&c=aYuZU1jYu59mf2qQutCTIs9L7Xg7DokoUvWUYTlU-2Y=" alt="" id="img">
+</div>
+<script>
+    let btn=document.getElementById("btn")
+    let easy=0;
+    btn.addEventListener("click",function(){
+        let img=document.getElementById("img")
+        let heading=document.getElementById("heading")
+    
+        if(easy==0){
+            img.style.display="none"
+            heading.innerHTML="Your image is hidden "
+            easy=1
+        }
+        else{
+            img.style.display="block"
+            heading.innerHTML="Your image is Visible "
+            easy=0;
+
+        }
+    })
+</script>
+</body>
+</html>

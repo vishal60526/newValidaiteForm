@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="find" placeholder="Search for Item">
+    <h2>Result:</h2>
+    <ul id="list">
+        <li id="item">Java</li>
+        <li id="item">Html</li>
+        <li id="item">Css</li>
+        <li id="item">JavaScript</li>
+        <li id="item">C Langauge</li>
+    </ul>
+    <script>
+let finds=document.getElementById("find")
+let item=document
+         .getElementById("list")
+         .getElementsByTagName("li");
+
+         
+finds.addEventListener("input",function (e){
+
+    let valo=finds.value;
+let values=valo.toLowerCase()
+for(let i=0; i<item.length; i++){
+
+  let match=item[i].innerHTML;
+  let matches=match.toLowerCase()
+  if(matches.includes(values)){
+    item[i].style.display="block"
+  }
+  else{
+    item[i].style.display="none"
+  }
+
+   }
+
+
+})
+    </script>
+</body>
+</html>

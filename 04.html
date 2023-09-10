@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .main{
+      display: flex;
+      justify-content: center;
+      height: 300px;
+      border: 2px solid black;
+    }
+    input{
+margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-  <input type="text" name="" id="myName">
-  <p id="hello">Type userName </p>
-<button id="btn">validiate</button>
-   <script>
-   var myName=document.getElementById("myName")
-   var btn=document.getElementById("btn")
-myName.addEventListener("keyup", function(e){
-  let values=myName.value;
-  let check=values.split("");
-if(values.length>8){
-  document.getElementById("hello").style.color="green"
-}
+  <div class="main">
+    <form action="" id="sumit">
+      <h1 id="heading">Sign Up Form</h1>
+      name: <input type="text" name="" id="username" placeholder="(minimum 3 characters)"><br>
+      Email: <input type="email" name="" id="email" placeholder="Enter your email"><br>
+      Password: <input type="password" name="" id="password" placeholder="(minimum 8 characters)"><br>
+      <input type="submit" value="sumit" id="btn">
+    </form>
+   
+  </div>
+  <script>
+let btn=document.getElementById("btn")
+let username=document.getElementById("username")
+let password=document.getElementById("password")
+btn.addEventListener("click",function(e){
 
+  e.preventDefault()
+  if(username.value.length>=3){
+    if(password.value.length>=8){
+      alert("validation sucessfull");
+    }
+    else{
+      alert("Form Validation Failed !!");
+    }
+  }
 
 })
-    
-   </script>
+  </script>
 </body>
 </html>
